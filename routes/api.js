@@ -20,7 +20,7 @@ router.put("/api/workouts/:id", ({ body, params }, res) => {
         //finds the workout plan via the id mongoose sets by default when new workout created
         { _id: params.id},
         // pushes new exercise to workout
-        { $push: {exercise: body}},
+        { $push: {exercises: body}},
         // returns modified document instead of original
         { new: true}
     )
@@ -32,7 +32,25 @@ router.put("/api/workouts/:id", ({ body, params }, res) => {
     });
 });
 
-// Create new workout
+// Get Last Workout
+
+router.get("/api/workouts", (req, res) => {
+    Workout.aggregate([
+        {
+            //adds new field to data called totalDuration, and uses $sum to return collective sum of numeric values
+            $addFields: {
+                totalDuration: { $sum: "$exercises.duration" }
+            }
+        }
+    ])
+    .then(dbWorkout => {
+        res.json(dbWorkout);
+    })
+    .catch(err => {
+        res.status(400).json(err);
+    });
+});
+
 
 
 module.exports = router;
