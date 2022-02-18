@@ -17,7 +17,7 @@ In order to install the app locally, first run "npm i" in the command line inter
 
 ## Usage
 
-    ![alt text](assets/images/2022-02-18 (2).png)
+    ![Preview](assets/images/screenshot.png)
   
 
 ## Credits
