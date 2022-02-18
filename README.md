@@ -19,6 +19,8 @@ In order to install the app locally, first run "npm i" in the command line inter
 
 
 ![Preview](https://raw.githubusercontent.com/hargis32/HW-18-NoSql-Workout-Track/main/assets/images/screenshot.png)
+
+[Heroku Deploy](https://fathomless-ravine-18673.herokuapp.com/?id=620ed6f3598dbe00168b3501)
   
 
 ## Credits
