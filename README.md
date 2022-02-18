@@ -17,7 +17,8 @@ In order to install the app locally, first run "npm i" in the command line inter
 
 ## Usage
 
-    ![Preview](assets/images/screenshot.png)
+
+    ![Preview](https://raw.githubusercontent.com/hargis32/HW-18-NoSql-Workout-Track/main/assets/images/screenshot.png)
   
 
 ## Credits
